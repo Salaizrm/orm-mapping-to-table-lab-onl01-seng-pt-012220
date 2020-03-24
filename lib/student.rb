@@ -10,9 +10,10 @@ class Student
 
   def self.table
     sql = <<-SQL
-    CREATE TABLE IS NOT EXIST song 
+    CREATE TABLE IS NOT EXIST song
 
     SQL
+  end
 
 
 
