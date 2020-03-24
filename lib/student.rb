@@ -8,9 +8,9 @@ class Student
     @grade = grade
   end
 
-  def self.table
+  def self.
     sql = <<-SQL
-    CREATE TABLE IS NOT EXIST song
+    CREATE TABLE IF NOT EXISTS song
 
     SQL
   end
