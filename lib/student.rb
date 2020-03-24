@@ -24,16 +24,17 @@ class Student
 
   def self.drop_table
     sql = <<-SQL
-    DROP TABLE students
+    DROP TABLE students;
     SQL
     DB[:conn].execute(sql)
   end
 
   def save
     sql = <<-SQL
-    INSERT INTO students (id, name, grade) VALUES (?,?,?)
+    INSERT INTO students (name,grade) VALUES (?,?);
     SQL
-    DB[:conn].execute(sql, self.id, self.name, self.grade)
+    DB[:conn].execute(sql, self.name, self.grade)
+    @id = DB[:conn].execute("SELECT MAX(ID) AS LastID FROM students")[0][0]
   end
 
   # Remember, you can access your database connection anywhere in this class
