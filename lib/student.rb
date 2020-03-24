@@ -8,7 +8,11 @@ class Student
     @grade = grade
   end
 
-  def
+  def self.table
+    sql = <<-SQL
+    CREATE TABLE IS NOT EXIST song 
+
+    SQL
 
 
 
