@@ -37,6 +37,9 @@ class Student
     @id = DB[:conn].execute("SELECT MAX(ID) AS LastID FROM students")[0][0]
   end
 
+  def self.create
+  end
+
   # Remember, you can access your database connection anywhere in this class
   #  with DB[:conn]
 
