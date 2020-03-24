@@ -1,6 +1,8 @@
 class Student
 
-  attr_reader :id
+  attr_writer :id, :name, :grade
+
+  def initialize (id=nil,name,grade)
 
 
 
