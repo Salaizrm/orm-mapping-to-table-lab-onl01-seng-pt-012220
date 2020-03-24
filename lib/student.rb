@@ -15,8 +15,8 @@ class Student
       name TEXT,
       grade INTEGER
     );
-
     SQL
+    DB[:conn]
   end
 
 
