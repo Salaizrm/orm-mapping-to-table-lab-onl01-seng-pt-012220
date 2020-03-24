@@ -10,7 +10,11 @@ class Student
 
   def self.
     sql = <<-SQL
-    CREATE TABLE IF NOT EXISTS song
+    CREATE TABLE IF NOT EXISTS student (
+      id INTEGER PRIMARY KEY,
+      name TEXT,
+      grade INTEGER
+    );
 
     SQL
   end
